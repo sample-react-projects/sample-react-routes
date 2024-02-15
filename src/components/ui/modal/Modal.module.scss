@@ -1,0 +1,11 @@
+.modal {
+  border: navajowhite;
+  border-radius: 0.2rem;
+  max-width: 500px;
+  padding: 1rem;
+  width:calc(100% - 2rem);
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
