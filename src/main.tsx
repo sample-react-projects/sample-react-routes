@@ -8,6 +8,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Authenticate from "./components/authenticate/Authenticate";
 import Home from "./components/home/Home";
+import Products from "./components/products/Products";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
           },
           { path: "register", element: <Register /> },
         ],
+      },
+      {
+        path: "products",
+        element: <Products />,
       },
     ],
   },
