@@ -1,5 +1,5 @@
 const Login: React.FC<{}> = () => {
-  return <>Login</>;
+  return <></>;
 };
 
 export default Login;
