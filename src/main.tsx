@@ -9,6 +9,7 @@ import Register from "./components/register/Register";
 import Authenticate from "./components/authenticate/Authenticate";
 import Home from "./components/home/Home";
 import Products from "./components/products/Products";
+import RouteError from "./components/route-error/RouteError";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "*",
+        element: <RouteError />,
       },
     ],
   },
