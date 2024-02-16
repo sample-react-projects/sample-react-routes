@@ -1,16 +1,31 @@
 .header {
-    align-items: center;
-    background-color: yellowgreen;
-    color: #303132;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;;
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
+  align-items: center;
+  background-color: yellowgreen;
+  color: #303132;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
 
-    .logo{
-        all:unset;
-        cursor: pointer;
+  .logo {
+    all: unset;
+    cursor: pointer;
+  }
+
+  .right {
+    align-items: center;
+    display: flex;
+    column-gap: 1rem;
+
+    .navlink {
+      all: unset;
+      cursor: pointer;
+
+      &--active {
+        font-weight: bold;
+        text-decoration: underline;
+      }
     }
   }
-  
+}
