@@ -7,12 +7,17 @@ import App from "./components/app/App";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Authenticate from "./components/authenticate/Authenticate";
+import Home from "./components/home/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
+      {
+        index: true,
+        element: <Home />,
+      },
       {
         path: "authenticate",
         element: <Authenticate />,
