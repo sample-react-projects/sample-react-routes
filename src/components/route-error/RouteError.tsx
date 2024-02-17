@@ -1,7 +1,13 @@
+import { useRouteError } from "react-router-dom";
+
 const RouteError: React.FC<{}> = () => {
-  return (
-    <>Looks like you have landed on an incorrect page. Please start over.</>
-  );
+  const routeError = useRouteError() as Response;
+  let errorMessage = "Looks like there was an error.";
+
+  if (routeError.status === 404) {
+    errorMessage = "Could not find the resource you are looking for";
+  }
+  return <>{errorMessage}</>;
 };
 
 export default RouteError;
