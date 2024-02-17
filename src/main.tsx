@@ -9,6 +9,7 @@ import Register from "./components/register/Register";
 import Authenticate from "./components/authenticate/Authenticate";
 import Home from "./components/home/Home";
 import Products from "./components/products/Products";
+import FallbackRoute from "./components/fallback-route/FallbackRoute";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "*",
+        element: <FallbackRoute />,
       },
     ],
   },
