@@ -10,6 +10,7 @@ import Authenticate from "./components/authenticate/Authenticate";
 import Home from "./components/home/Home";
 import Products from "./components/products/Products";
 import FallbackRoute from "./components/fallback-route/FallbackRoute";
+import { logoutAction } from "./actions/logout";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
+      },
+      {
+        path: "logout",
+        action: logoutAction,
       },
       {
         path: "*",
