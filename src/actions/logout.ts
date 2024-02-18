@@ -1,7 +1,7 @@
-import { redirect } from "react-router-dom";
+import { ActionFunction, redirect } from "react-router-dom";
 import { setAuthToken } from "../util/localStorage";
 
-export function logoutAction() {
+export const logoutAction: ActionFunction<void> = () => {
   setAuthToken("");
-  redirect("/authentication/login");
-}
+  return redirect("/authenticate/login");
+};
