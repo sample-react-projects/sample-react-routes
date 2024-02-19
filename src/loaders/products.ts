@@ -2,7 +2,7 @@ import { json } from "react-router-dom";
 
 export type Product = { id: Number; title: string };
 
-export async function products() {
+export async function productsLoader() {
   let products = await getProducts();
   json(products);
 }
