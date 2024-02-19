@@ -12,6 +12,7 @@ import Products from "./components/products/Products";
 import FallbackRoute from "./components/fallback-route/FallbackRoute";
 import { logoutAction } from "./actions/logout";
 import { routeProtection } from "./loaders/route-protection";
+import { loginAction } from "./actions/login";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
           {
             path: "login",
             element: <Login />,
+            action: loginAction,
           },
           { path: "register", element: <Register /> },
         ],
