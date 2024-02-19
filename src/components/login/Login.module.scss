@@ -1,0 +1,11 @@
+.form {
+  margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  .actions {
+    text-align: center;
+  }
+}
