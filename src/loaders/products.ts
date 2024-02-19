@@ -1,10 +1,17 @@
 import { json } from "react-router-dom";
+import { routeProtection } from "./route-protection";
 
 export type Product = { id: Number; title: string };
 
 export async function productsLoader() {
+  const redirectRoute = routeProtection();
+
+  if (redirectRoute) {
+    return redirectRoute;
+  }
+
   let products = await getProducts();
-  json(products);
+  return json(products);
 }
 
 function getProducts() {
