@@ -1,9 +1,11 @@
-import { Form, useActionData } from "react-router-dom";
+import { Form, useActionData, useNavigation } from "react-router-dom";
 import styles from "./Login.module.scss";
 import Button from "../ui/button/Button";
 
 const Login: React.FC<{}> = () => {
   const actionData = useActionData() as { error: string };
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
 
   return (
     <>
@@ -24,7 +26,7 @@ const Login: React.FC<{}> = () => {
           autoComplete="off"
         />
         <div className={styles.actions}>
-          <Button>Login</Button>
+          <Button>{isSubmitting ? "Logging in.." : "Login"}</Button>
         </div>
       </Form>
     </>
