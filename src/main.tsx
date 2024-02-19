@@ -13,6 +13,7 @@ import FallbackRoute from "./components/fallback-route/FallbackRoute";
 import { logoutAction } from "./actions/logout";
 import { routeProtection } from "./loaders/route-protection";
 import { loginAction } from "./actions/login";
+import { productsLoader } from "./loaders/products";
 
 const router = createBrowserRouter([
   {
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
       {
         path: "products",
         element: <Products />,
-        loader: routeProtection,
+        loader: productsLoader,
       },
       {
         path: "logout",
